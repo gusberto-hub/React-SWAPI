@@ -1,7 +1,15 @@
 # Star Wars Exercise for SIT Academy
 
 As a teaching assistant for the Full-Stack bootcamp i was also responsible for the solutios of the given exercises.
-During this exercise the students work with the Star Wars API and try to display the fetched data as follows:
+Since React got updated recently i updated the package to the newest version and built this application as a possible approach for a solution.
+Besides the functionality i tried to style it in a star-wars-ish style.
+
+## Why class components?
+At that time in the course, the students weren't introduced to **functional components** yet. This is why this application is still written with good old **class components**.
+
+## The Task
+
+During this exercise the students work with the [Star Wars API](https://swapi.dev/) and try to display the fetched data as follows:
 
 The main idea is that there will be 4 columns:
 

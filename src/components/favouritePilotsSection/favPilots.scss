@@ -1,0 +1,37 @@
+@use '../../styles' as *;
+
+.favSection {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 20rem;
+  min-height: 20rem;
+  padding: 0.5rem;
+  // transition: all 50ms linear;
+  border: $yellow 2px solid;
+  background: black;
+
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeSlideIn;
+    animation-duration: 200ms;
+
+    button {
+      max-width: 2em;
+      max-height: 2em;
+    }
+  }
+
+  & > header {
+    border-bottom: 2px solid $yellow;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+  }
+}

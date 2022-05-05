@@ -1,0 +1,22 @@
+@use '../../styles' as *;
+
+#pilotsSection {
+  padding-bottom: 20rem;
+  .pilot {
+    border: 1px solid $yellow;
+    padding-bottom: 2rem;
+    padding: 1rem;
+    animation: fadeSlideIn;
+    animation-duration: 200ms;
+    ul {
+      margin-bottom: 0.5rem;
+      li {
+        margin-top: 0.5rem;
+        span {
+          @extend .spanText;
+          display: block;
+        }
+      }
+    }
+  }
+}

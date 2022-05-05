@@ -1,0 +1,86 @@
+@use './styles' as *;
+
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $yellow;
+}
+
+body {
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: $header-height;
+}
+
+h1 {
+  background-color: $yellow;
+  color: black;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: -1px;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1em);
+  }
+}
+
+.App > header {
+  height: $header-height;
+  width: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  img {
+    max-height: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+// making every section scrollable for itself
+section {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: calc(100vh - #{$header-height});
+}
+
+// general styling for all button
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: $yellow 1px solid;
+  border-radius: 0px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  @extend .spanText;
+  transition: border-radius 200ms ease;
+
+  &:hover {
+    border-radius: 2rem;
+  }
+}

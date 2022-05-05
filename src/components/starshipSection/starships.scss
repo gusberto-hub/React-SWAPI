@@ -1,0 +1,32 @@
+@use '../../styles' as *;
+
+#starshipSection {
+  .starship {
+    animation: fadeSlideIn;
+    animation-duration: 200ms;
+    border: 1px solid $yellow;
+    padding: 1rem;
+    margin-right: 2rem;
+    transition: all 200ms ease;
+    &-active {
+      margin-right: 0rem;
+      background-color: $yellow;
+      & * {
+        color: black;
+        border-color: black;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0.2em;
+    }
+
+    li {
+      margin-top: 0.5em;
+      span {
+        @extend .spanText;
+        display: block;
+      }
+    }
+  }
+}
